@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer class="sidenav"
+  mode='side'
+  opened="true">
+  <app-side-navigation></app-side-navigation> 
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <div class="toolbar">
+          <mat-toolbar  class=toolbar color="primary">
+            <button
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <button
+              type="button"
+                aria-label="home icon"
+                mat-icon-button   routerLink="/carfluent/home">
+                <mat-icon class="example-icon" aria-hidden="=true" aria-label="Example home icon" routerLink="/home">home</mat-icon>
+                </button>
+                <span>Welcome Admin!</span>
+          </mat-toolbar>
+        </div>
+      </div>
+      <div class="main">
+        <router-outlet></router-outlet> 
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  

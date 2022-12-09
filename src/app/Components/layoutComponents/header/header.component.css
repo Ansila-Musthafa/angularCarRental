@@ -1,0 +1,54 @@
+.sidenav-container
+{
+  height: 100%;
+   background-image: url('/assets/images/bg.jpeg') ;
+  background-size:cover;
+  background-position:center center ; 
+   background-color: rgb(255, 255, 251);
+   /* background:linear-gradient(135deg, black 5%,rgb(36, 0, 0) 100% );  */
+
+}
+
+element.style
+{
+  opacity: 0.1 !important;
+  transform: none;
+  visibility: visible;
+}
+
+.sidenav
+{
+  width: 250px;
+
+}
+.mat-toolbar
+{
+  justify-content: space-between;
+}
+
+.mat-toolbar.mat-primary
+{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  }
+
+ .example-icon
+ {
+  
+  padding: 1% 25px 2 12px;
+
+}
+.example-spacer
+{
+  flex: 1 1 auto;
+}
+.toolbar
+  {
+    background-color:#08060a;
+  }
+  .mat-drawer {
+    background-color: rgb(0, 0, 0);
+    opacity:0.9;
+   
+  }

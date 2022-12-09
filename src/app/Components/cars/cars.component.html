@@ -1,0 +1,226 @@
+
+
+    
+     <!-- <div class="container my-5">
+        <h1 class="mb-3">Car Details</h1>
+
+
+        <table class="table" *ngIf="carsList && (carsList.length > 0) ">
+            <thead>
+                <tr>
+                    <th >ID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Fuel Type</th>
+                    <th>Transmision Type</th>
+                    <th>NumberOfSeats</th>
+                    <th>Color</th>
+                    <th>Registration Number</th>
+                    <th>Car Type</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Hub</th>
+                    <th>Kilometer</th>
+                    <th>Availability Status</th>
+                    <th>Action</th>
+               
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let cars of carsList">
+                  <td>{{cars.carID}}</td>
+                  <td>{{cars.make}}</td>
+                  <td>{{cars.model}}</td>
+                  <td>{{cars.fuelType}}</td>
+                  <td>{{cars.transmissionType}}</td>
+                  <td>{{cars.numberOfSeats}}</td>
+                  <td>{{cars.colour}}</td>
+                  <td>{{cars.registrationNumber}}</td>
+                  <td>{{cars.carType}}</td>
+                  <td>{{cars.categoryId}}</td>
+                  <td>{{cars.price}}</td>
+                  <td>{{cars.hub}}</td>
+                  <td>{{cars.kilometers}}</td>
+                  <td>{{cars.availabilitystatus}}</td>
+                 <td>
+                    <button type="submit" class="btn btn-info mb-2"  color="warn" [routerLink]= "['/carfluent','edit',cars.carID]">Edit</button>
+<div class="row">
+                     <button mat-fab color="danger" aria-label="Example icon button with a delete icon"  (click)="deletecars(cars.carID)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                     
+                <td>
+                    
+                </tr> 
+                <tr *ngIf="carsList">
+                    <td>{{carsList[0].Make}}</td>
+                </tr> 
+            </tbody>
+
+        </table>
+        <p *ngIf="!carsList || carsList.length<= 0"> No Cars To Show</p>
+     </div>
+  -->
+  
+
+   
+     <div class="container-fluid g-0">
+
+        
+      
+        <main class="black-borde">
+      
+          <div class="toolbar"  *ngIf="carsList && (carsList.length > 0) ">
+      
+            <div class="search-cars">
+              <input type="search" class="form-control" placeholder="Search Cars">
+            </div>
+      
+          </div>
+      
+          <!--  DISPLAY ALL THE CARS-->
+          <div class="cars">
+      
+            <div class="row mt-5" *ngIf="!carsList || carsList.length<= 0">
+              <div class="col text-center">
+                <span class="text-secondary fs-2 fw-bold fst-italic"> There are no Cars To Show</span>
+              </div>
+            </div>
+      
+            <div class="row mt-4" *ngFor="let cars of carsList; let ei = index;">
+              <div class="col">
+                <div class="container-fluid g-0 p-2">
+
+                    <div class="row g-0">
+                
+                        <div class="col-md-2 d-flex justify-content-center align-items-center">
+                            <img src="/assets/images/" alt="Car Image" class="car">
+                        </div>
+                
+                        <div class="col ps-2">
+                
+                            <div class="row g-0">
+                
+                                <div class="col-md-10 text-center">
+                                    <span class="name">{{cars.make }} {{cars.model}}</span>
+                                </div>
+                
+                                <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-info mr-3"
+                                        [routerLink]= "['/carfluent','edit',cars.carID]"  >Edit</button>
+                                        <button type="button" class="btn btn-danger ml-5"
+                                            (click)="deletecars(cars.carID)">Delete</button>
+                                    </div>
+                                </div>
+                
+                            </div>
+                
+                            <div class="row g-0 mt-3">
+                
+                                <div class="col-md">
+                
+                                    <table class="table table-hover mx-auto">
+                                        <tbody>
+                
+                                            <tr>
+                                                <td class="head">Id:</td>
+                                                <td>{{cars.carID}}</td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td  class="head">Make:</td>
+                                                <td>{{cars.make}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td  class="head">Model:</td>
+                                                <td>{{cars.model}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td  class="head">Fuel Type:</td>
+                                                <td>{{cars.fuelType}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head" >Registration Number:</td>
+                                                <td>{{cars.registrationNumber}}</td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td  class="head">Car Type:</td>
+                                                <td>{{cars.carType}}</td>
+                                            </tr>
+                                          
+                                            <tr>
+                                                <td class="head">Colour:</td>
+                                                <td>{{cars.colour}}</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                
+                                </div>
+                
+                                <div class="col">
+                
+                                    <table class="table table-hover mx-3 ">
+                                        <tbody>
+                                            <tr>
+                                                <td class="head">Transmission Type:</td>
+                                                <td>{{cars.transmissionType | titlecase}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head">Number Of Seats:</td>
+                                                <td>{{cars.numberOfSeats}}</td>
+                                            </tr>
+                                           
+                
+                                            <tr>
+                                                <td class="head">Hub:</td>
+                                                <td>{{cars.hub | titlecase}}</td>
+                                            </tr>
+                
+                                            <tr>
+                                                <td class="head">Kilometer:</td>
+                                                <td>{{cars.kilometers}}Km</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head">Price:</td>
+                                                <td>{{cars.price}} </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head">Category:</td>
+                                                <td *ngIf="cars.categoryPicklistID==3">Luxury</td>
+                                                <td *ngIf="cars.categoryPicklistID==1">Economy</td>
+                                                <td *ngIf="cars.categoryPicklistID==2">Premium</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="head">Status:</td>
+                                                <td>{{cars.availabilitystatus}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </main>
+      </div>
+      
+   
+     
+     
+
+
+
+
+   

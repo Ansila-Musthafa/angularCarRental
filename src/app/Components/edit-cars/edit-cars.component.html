@@ -1,0 +1,176 @@
+<body>
+
+<div class="container my-5">
+  <h1 >Edit Car Details </h1>
+<div mat-dialog-content>
+  <form  #form="ngForm" (ngSubmit)="updatecars()" >
+
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="form-group">
+            <label for="make">Id</label>
+            <input type="text" class="form-control" id="id" readonly  
+            name="id" [(ngModel)]="cardetails.carID">
+            </div>
+          </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="make">Make</label>
+            <input type="text" class="form-control" id="make"  placeholder=" Make" 
+            name="make" [(ngModel)]="cardetails.make">
+            </div>
+          </div>
+       
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" class="form-control" id="model" placeholder="Model"
+            name="model" [(ngModel)]="cardetails.model">
+          </div>
+        </div>
+      </div>
+      
+<div class="row">
+        <div class="col-md-4 mb-3">
+            <label  for="fuelType"  class="form-label">Fuel Type</label>
+            <select  class="form-select"id="fuelType" class="form-control" 
+            name=" fuelType" [(ngModel)]="cardetails.fuelType" placeholder="select">
+              <option>Petrol</option>
+              <option>Diesel</option>
+              <option>CNG</option>
+              <option>Electric</option>
+            </select>
+            </div>
+         
+    
+            <div class="col-md-4 mb-3">
+              <div class="form-group">
+                <label  for="transmissionType" class="form-label">Transmission Type</label>
+                <select id="transmissionType" class="form-control"
+                name="transmissionType"[(ngModel)]="cardetails.transmissionType" placeholder="select">
+                  <option>Automatic</option>
+                  <option>Manual</option>
+                </select>
+              </div>
+            </div> 
+      
+            <div class="col-md-4 mb-3">
+              <div class="form-group">
+                <label  for="num of seats"  class="form-label">Number of Seats</label>
+                <select id="num of seats" class="form-control"
+                name=" numberOfSeats" [(ngModel)]="cardetails.numberOfSeats" placeholder="select">
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                </select>
+              </div>
+            </div> 
+          </div>
+    
+      <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="form-group">
+          <label for="reg num" class="form-label">Registration Number</label>
+          <input type="text" class="form-control" id="reg num" placeholder="reg num"
+          name="registrationNumber" [(ngModel)]="cardetails.registrationNumber">
+        </div>
+        </div>
+    
+    
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="colour" class="form-label">Colour</label>
+            <input type="text" class="form-control" id="colour" placeholder="color"
+            name="colour" [(ngModel)]="cardetails.colour">
+          </div>
+          </div>
+       
+        
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="Category " class="form-label"> Category</label>
+            <select id="category" class="form-control"
+            name="category" [(ngModel)]="cardetails.CategoryId" required>
+            <option value.ToInt32='1'>1</option>
+            <option value.ToInt32='2'>2</option>
+            <option value.ToInt32='3'>3</option>
+            </select>
+          </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="form-group">
+          <label for="Price"   class="form-label"> Price</label>
+          <input type="text" class="form-control" id="  Price" placeholder="Price"
+          name=" price " [(ngModel)]="cardetails.price">
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-3">
+        <div class="form-group">
+          <label  for="hub" class="form-label">Hub</label>
+          <select id="hub" class="form-control"
+          name="hub" [(ngModel)]="cardetails.hub">
+            <option>Kochi</option>
+            <option>Kottayam</option>
+            <option>Kozhikode</option>
+            <option>Palakkad</option>
+            <option>Thrissur</option>
+          </select>
+        </div>
+      </div> 
+    
+      <div class="col-md-4 mb-3">
+        <div class="form-group">
+          <label  for="CarType"  class="form-label" >CarType</label>
+          <select id="carType" class="form-control"
+          name="carType"   [(ngModel)]="cardetails.carType" >
+            <option>Hatchback</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+            </select>
+        </div>
+      </div> 
+    </div>
+
+    <div class="row">
+     <div class="form-group col-md-3">
+      <label for="AvailabilityStatus" class="form-label">Status</label>
+      <select id="availabilityStatus" class="form-control" 
+      name="availabilitystatus"   [(ngModel)]="cardetails.availabilitystatus" >
+        <option>Available</option>
+        <option>Unavailable</option>
+      </select>
+    </div>
+    
+    
+    
+    <div class="col-md-6 mb-3">
+      <div class="col">
+        <label for="uploadphoto" class="form-label">Upload Photo</label>
+        <input type="file" class="form-control" id="uploadphoto" #upload photo>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="form-group">
+        <label for="kilometers" class="form-label">Kilometers</label>
+        <input type="text" class="form-control" id="kilometers" placeholder="kilometer"
+       name="kilometers" [(ngModel)]="cardetails.kilometers" >
+      </div>
+    </div>
+  </div>
+
+  
+     <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close (click)="close()" >close</button>
+        <button style="margin-left:8px;" type="submit" mat-raised-button (click)="updatecars()"  >Save</button>
+     </div>
+    </form>
+    </div>
+</div>
+  </body>

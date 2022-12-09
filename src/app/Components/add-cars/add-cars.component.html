@@ -1,0 +1,174 @@
+<body>
+<div class="container my-5">
+    <h1 class="mb-3">Enter Car Details</h1>
+
+    
+    <form  #form="ngForm" (ngSubmit)="addCars()" >
+    <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="form-group">
+        <label for="make" class="form-label">Make</label>
+        <input type="text" class="form-control" id="make"  placeholder=" Make"
+        name="make" [(ngModel)]="addCarRequest.make">
+        </div>
+      </div>
+    
+
+    <div class="col-md-4 mb-3">
+      <div class="form-group">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="model" placeholder="Model"
+       name="model" [(ngModel)]="addCarRequest.model" >
+      </div>
+    </div>
+
+    
+
+    <div class="col-md-4 mb-3">
+      <label  for="Fueltype" class="form-label " >Fuel Type</label>
+        <select   class="form-select"id="fueltype" class="form-control" 
+        name=" fuelType" [(ngModel)]="addCarRequest.fuelType"  >
+          <option value="default" selected >Select</option>
+          <option>Petrol</option>
+          <option>Diesel</option>
+          <option>CNG</option>
+          <option>Electric</option>
+        </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <div class="form-group">
+            <label  for="Transmissiontype" class="form-label ">Transmission Type</label>
+            <select id="transmissiontype" class="form-control"  
+            name=" transmissionType"name="Model"[(ngModel)]="addCarRequest.transmissionType">
+              <option selected>Select</option>
+              <option>Automatic</option>
+              <option>Manual</option>
+            </select>
+          </div>
+        </div> 
+  
+        <div class="col-md-3 mb-3">
+          <div class="form-group">
+            <label  for="num of seats"  class="form-label " >Number of Seats</label>
+            <select id="num of seats" class="form-control"
+             name=" numberOfSeats" [(ngModel)]="addCarRequest.numberOfSeats">
+              <option selected>Select</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+            </select>
+          </div>
+        </div> 
+    
+
+     
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <label for="reg num"  class="form-label " >Registration Number</label>
+      <input type="text" class="form-control" id="reg num" placeholder="reg num" 
+       name="registrationNumber" [(ngModel)]="addCarRequest.registrationNumber">
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="form-group">
+        <label for="color"  class="form-label ">Colour</label>
+        <input type="text" class="form-control" id="color" placeholder="color"  
+         name="colour" [(ngModel)]="addCarRequest.colour">
+      </div>
+      </div>
+   
+    
+    <div class="col-md-4 mb-3">
+      <div class="form-group">
+        <label for="CategoryId " class="form-label " > Category</label>
+        <select id="CategoryId" class="form-control" 
+         name="CategoryId" [(ngModel)]="addCarRequest.CategoryId">
+              <option selected>Select</option>
+              <option value =1>Economy</option>
+              <option value=2>Premium</option>
+              <option value=3>Luxury</option>
+        </select>
+      </div>
+  </div>
+
+
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <label for="Price"   class="form-label " > Price</label>
+      <input type="number" class="form-control" id="  Price" placeholder="Price" 
+      name="  carType " [(ngModel)]="addCarRequest.price" >
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <label  for="hub"  class="form-label " >Hub</label>
+      <select id="hub" class="form-control"  
+      name="hub"    [(ngModel)]="addCarRequest.hub">
+        <option selected>Select</option>
+        <option>Kochi</option>
+        <option>Kottayam</option>
+        <option>Kozhikode</option>
+        <option>Palakkad</option>
+        <option>Thrissur</option>
+      </select>
+    </div>
+  </div> 
+
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <label  for="CarType" class="form-label " >CarType</label>
+      <select id="CarType" class="form-control" 
+        name="carType"   [(ngModel)]="addCarRequest.carType" >
+      <option selected>Select </option>
+        <option>Hatchback</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        </select>
+    </div>
+  </div> 
+
+
+ <div class="form-group col-md-3">
+  <label for="AvailabilityStatus"   class="form-label "  >Status</label>
+  <select id="AvailabilityStatus" class="form-control" 
+   name="availabilitystatus"   [(ngModel)]="addCarRequest.availabilitystatus" >
+    <option selected>Select </option>
+    <option>Available</option>
+    <option>Unavailable</option>
+  </select>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6 mb-3">
+  <div class="col">
+    <label for="uploadphoto" class="form-label">Upload Photo</label>
+    <input type="file" class="form-control" id="uploadphoto" #upload photo>
+  </div>
+</div>
+
+
+  <div class="col-md-4 mb-3">
+    <div class="form-group">
+      <label for="kilometers" class="form-label">Kilometers</label>
+      <input type="text" class="form-control" id="kilometers" placeholder="kilometer"
+     name="kilometers" [(ngModel)]="addCarRequest.kilometers" >
+    </div>
+  </div>
+</div>
+
+  <button class="btn btn-danger" type="submit" >   Save   </button>
+ 
+</form>
+</div>
+</body>

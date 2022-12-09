@@ -1,0 +1,104 @@
+/* *{margin: 0;
+    padding: 0;
+    
+    }
+body
+{
+    background: url('/assets/images/logincar2.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    place-items: center;
+}
+h1
+{
+    font-size: 60px;
+    color:white
+}
+
+.color-overlay
+{
+background: linear-gradient(rgb(243, 243, 242),rgb(235, 253, 71));
+width:100%;
+height:100%;
+opacity:0.3;
+position:relative;
+}    */
+
+
+body{
+    height:100vh;
+width:100vw;
+margin:0;
+font-family: 'Playball';
+font-size:4.5rem;
+color:black;
+display:grid;
+place-items: center;
+place-content: center;
+background: url('/assets/images/logincar2.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+background-position: cover;
+flex-wrap: wrap;
+
+
+}
+
+em{
+    font-size: 1.4rem;
+    color:aliceblue;
+    margin-bottom:145px;
+    margin-left:1000px;
+    
+
+}
+h1{
+    font-size: 5rem;
+    font-weight: bold;
+    color:white;
+    text-align: left;
+    margin-bottom:20px;
+    margin-left:1000px
+}
+.signin{
+    margin-left:1100px;
+    margin-top:20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 6px;
+    font-size: 20px;
+    background-color:rgb(148, 1, 9);
+    color:white;
+    border: white;
+    box-shadow: none;
+   border-radius: 9px;
+
+  
+}
+.signin:hover{
+    background-color:rgb(221, 55, 55)
+}
+.mat-icon
+{
+    padding: 3px 4px 5px 3px;
+    color:white;
+}
+.color-overlay
+{
+background: linear-gradient(rgb(243, 243, 242),rgb(235, 253, 71)),url("/assets/images/logincar2.jpg");
+-webkit-background-size:cover;
+background-size: cover;
+width:100%;
+height:100%;
+opacity:0.3;
+
+}    

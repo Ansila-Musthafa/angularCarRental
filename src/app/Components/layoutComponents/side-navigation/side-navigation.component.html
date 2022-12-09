@@ -1,0 +1,32 @@
+
+ <div >
+   <div class="top">
+          <img [src]="logo" alt="">
+          <h3>CARFLUENT</h3>
+        </div>
+        <div>
+        <mat-nav-list>
+        <a mat-list-item href="/managecars"  routerLink="managecars" >
+          <h4>Cars</h4></a>
+        <a mat-list-item  routerLink="/carfluent/users" >
+         <h4>Users </h4> </a>
+        <a mat-list-item  routerLink="bookings" >
+          <h4>Bookings</h4></a>
+        <a mat-list-item  routerLink="payments">
+         <h4> Payments</h4></a>
+        <a mat-list-item  routerLink="promocodes">
+          <h4>Special Offers</h4></a>
+        <a mat-list-item  routerLink="returnedcars">
+          <h4>Returned Cars</h4></a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      <button
+         class= "logout" type="button"
+     mat-list-item  routerLink="/login">
+            <h4>Logout<mat-icon class="example-icon" >logout</mat-icon></h4>
+</button>
+      </mat-nav-list>
+    </div>  

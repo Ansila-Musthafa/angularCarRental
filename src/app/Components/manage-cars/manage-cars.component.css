@@ -1,0 +1,132 @@
+h1{
+    color:black;
+}
+.title{
+ 
+    padding: 20px 50px 50px 20px; 
+    top :50px;
+    bottom:20px;
+    font-size:x-large;
+    font-weight:600;
+    color:rgb(255, 255, 255);
+}
+.pt-3 {
+  padding-top: 0rem !important;
+  margin-bottom:5rem;
+}
+.mt-5 {
+margin-top: 1.5rem !important;
+padding:20px;
+margin-bottom:5rem;
+/* display: flex; */
+}
+.example-icon
+ {
+  padding:1% 25px 1% 12px;
+
+}
+.example-spacer
+{
+  flex: 1 1 auto;
+}
+.card{
+  margin-top: 5.5rem;
+  width:250px;
+  height:250px;
+  position:relative;
+  padding-left: 2px;
+}
+.row {
+  --bs-gutter-x: 20rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: 10px;
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: 10px;
+  padding: 5px;}
+  .color-white{
+    color:rgb(247, 245, 245);
+}
+.flip-box{
+    transform-style: preserve-3d;
+    perspective:1000px;
+    cursor:pointer;
+    margin-top: 50px;
+
+}
+.flip-box-front,.flip-box-back{
+    background-size:cover;
+    background-position: center;
+    border-radius:8px;
+    min-height:290px;
+    width:300px;
+    transition:1.5s cubic-bezier(0.1,0.2,0.2,1);
+    backface-visibility: hidden;
+
+
+}
+.flip-box-front{
+    transform:rotateY(0deg);
+    transform-style: preserve-3d;
+    
+   
+
+}
+.flip-box:hover .flip-box-front{
+transform: rotateY(-180deg);
+transform-style: preserve-3d;
+
+}
+.flip-box-back{
+    position: absolute;
+    top:0;
+    left:0;
+    width:300px; 
+    transform:rotateY(180deg);
+    transform-style: preserve-3d;
+
+}
+.flip-box:hover .flip-box-back{
+    transform: rotateY(0deg);
+transform-style: preserve-3d;
+}
+.flip-box .inner{
+position: absolute;
+left:0;
+width:100%;
+padding:60px;
+outline:1px solid transparent;
+perspective: inherit;
+z-index:2;
+transform:translateY(-50%)translateZ(60px) scale(0.94);
+top:50%;
+}
+.flip-box-header{
+    font-size:30px;
+    color:rgb(253, 246, 246);
+}
+
+.flip-box-p{
+    font-size:20px;
+    line-height: 1.5rem;
+}
+.flip-box-img{
+    margin-top:25px;
+
+}
+.flip-box-button{
+    background-color:transparent;
+    border:2px solid #fff;
+    border-radius:5px;
+    width:100px;
+    height:50px;
+    color:rgb(247, 241, 241);
+    cursor:pointer;
+    font-size: 15px;
+    font-weight:400;
+    margin-top: 25px;
+    padding: 15px 20px; 
+    text-transform: uppercase;
+}

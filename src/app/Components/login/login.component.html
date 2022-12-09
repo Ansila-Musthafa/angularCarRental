@@ -1,0 +1,77 @@
+<!-- 
+<body>
+    <div class="login-form">
+        <h1 class="mb-3">Login</h1>
+        
+        <div class="col-md-9 mb-4">
+
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" id="Email"  placeholder=" Email" >
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-9 mb-4">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="password">
+          </div>
+        </div>
+      </div>
+        <a href="/resetpassword ">Change Password</a><br>
+        <div class="btn-container">
+        <button type="submit" class="loginbt" routerLink="/carfluent/home">   Login  </button>
+        
+    </div>
+    </div>
+</body>  -->
+<body>
+<form class="border p-3 rounded-3" [formGroup]="loginForm" (ngSubmit)="onLogin">
+  <div class="row g-0">
+      <div class="col-text-center p-2 mb-3 ">
+          <span class="fs-3">Login</span>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-9 mb-3 ">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" 
+          formControlName="email">
+          <div class="form-text text-danger" *ngIf="Username.errors?. ['required']&&(Username.dirty || Username.touched)">
+            Email is Required
+          </div>
+
+          <div class="form-text text-danger" *ngIf="Username.errors?. ['email']&&(Username.dirty || Username.touched)">
+            Email is invalid
+          </div>
+        </div>
+  </div>
+  
+      
+ 
+  <div class="row">
+      <div class="col-md-9 mb-3">
+          <label for="pwd" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pwd"
+          formControlName= "pwd">   
+      </div>
+      <div class="form-text text-danger" *ngIf="Password.errors?. ['required']&&(Password.dirty || Password.touched)">
+        Password is Required
+      </div>
+
+      <div class="form-text text-danger" *ngIf="Password.errors?. ['minlength']&&(Password.dirty || Password.touched)">
+        Invalid Password
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-6 offset-3">
+          <div class="d-grid">
+          <button (click)="onLogin()" type="submit" [disabled]="loginForm.invalid" class="btn btn-danger" routerLink="/carfluent/home" > Login</button>
+      </div>
+  </div>
+</div>
+
+</form>
+</body> 
